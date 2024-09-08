@@ -1,5 +1,5 @@
 "use client"
-import fetcher from "@/app/actions/fetcher";
+
 import axios from "axios";
 import { Cross, CrossIcon } from "lucide-react";
 import Link from "next/link";
@@ -13,8 +13,7 @@ import Drawer from 'react-modern-drawer'
 //import styles 👇
 import 'react-modern-drawer/dist/index.css'
 
-import useSWR from "swr";
-import {  useToast } from "@/components/ui/use-toast"
+
 import { Label } from "../ui/label";
 import { Checkbox } from "../ui/checkbox";
 
@@ -23,7 +22,7 @@ export default function GreenNav({ children }: { children: React.ReactNode }) {
     const [isOpe, setIsOpe] = React.useState(false);
     //  const {data , isLoading} = useSWR("/api/login",fetcher)
     const [logout,isLogout] =useState(false)
-    const { toast } = useToast()
+   
     const toggleDrawer = () => {
         setIsOpen(prevState => !prevState);
     };

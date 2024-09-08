@@ -1,17 +1,18 @@
 import React from "react"
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Nav"
 import OurImage from "./components/OurImage"
+import GreenNav from "./components/GreenNav"
 
 
 export default function Nav(){
 
     return(
-        <div className="flex justify-between lg:items-start gap-2 bg-bl ">
-            <OurImage/>
-            <div className="m-2">
-            <Navbar/>
-            </div>
-                        
-        </div>
+        <>
+        <Nav />
+        <GreenNav>
+
+            //here write your codes
+        </GreenNav>
+        </>
     )
 }

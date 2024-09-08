@@ -33,18 +33,12 @@ export default function GreenNav({ children }: { children: React.ReactNode }) {
         try{
         const response = await axios.post('/api/logout')
         if(response.data.message ==  "Logged Out!"){
-            toast({
-                title:"Successful",
-                description:"Logged out Succesfully",
-            })
+          
             location.reload()
         }   
         
     }catch(error){
-        toast({
-            title:"Error",
-           description: "Failed to log out",
-        })
+     
     }finally{
         isLogout(false)
     }
@@ -55,18 +49,12 @@ export default function GreenNav({ children }: { children: React.ReactNode }) {
             try{
             const response = await axios.post('/api/logout')
             if(response.data.message ==  "Logged Out!"){
-                toast({
-                    title:"Successful",
-                    description:"Logged out Succesfully",
-                })
+                
                 location.reload()
             }   
             
         }catch(error){
-            toast({
-                title:"Error",
-               description: "Failed to log out",
-            })
+            
         }finally{
             isLogout(false)
         }
